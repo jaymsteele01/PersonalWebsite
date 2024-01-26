@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaiah Steele Professional Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation bar Section-->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#home" id="navbar__logo">Jaiah Malik Steele</a>
+           <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+           </div> 
+           <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="#home" class="navbar__links" id="home-page">Home</a>
+            </li>
+            <li class="navbar__item">
+                <a href="/tech.html" class="navbar__links" id="technical-page">Portfolio</a>
+            </li>
+            <li class="navbar__item">
+                <a href="/qualifications.html" class="navbar__links" id="qualifications-page">Qualifications</a>
+            </li>
+            <li class="navbar__item">
+                <a href="/service.html" class="navbar__links" id="service-page">Service/Involvement</a>
+            </li>
+            <li class="navbar__item">
+                <a href="/hobbies.html" class="navbar__links" id="hobbies-page">Hobbies/Interests</a>
+            </li>
+            <li class="navbar__btn">
+                <a href="/signup.html" class="button" id="more">Contacts</a>
+            </li>
+           </ul>
+        </div>
+    </nav>
+    <!--about section-->
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/6E9A7411.jpg" alt="">
+                </div>
+
+                <div class="about-col-2">
+                    <h1 class = "sub-title">About Me</h1>
+                    <p> Howdy! My name is Jaiah Steele and I am a computer engineering major in the graduating class of 2025 from Katy, Texas. This summer, I will be a 
+                        product marketing engineering intern at Texas Instruments at their Dallas campus.
+                    </p>
+                    <div class="tab-titles">
+                        <p class = "tab-links active-link" onclick="opentab('Education')">Education</p>
+                        <p class = "tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class = "tab-links" onclick="opentab('Skills')">Skills</p>
+                    </div>
+                    <div class="tab-contents active-tab" id = "Education">
+                        <ul>
+                            <li><span>Texas A&M</span> <br>B.S Computer Engineering </li>
+                            <li><span>GPA</span> <br>3.34 </li>
+                            <li><span>Graduation</span> <br>May 2025</li>
+                      </ul>
+                    </div>
+                    <div class="tab-contents" id = "Experience">
+                        <ul>
+                            <li><span>Texas Instruments</span> <br>Summer 2024 Incoming Product Marketing Engineering Intern</li>
+                            <li><span>University of Houston</span> <br>Summer 2023 REU Intern</li>
+                            <li><span>DiscoverAI</span> <br>Spring 2023 Participant</li>
+                      </ul>
+                    </div>
+                    <div class="tab-contents" id = "Skills">
+                        <ul>
+                            <li><span>Relevant Coursework</span> <br> Data Structures and Algorithms, Digital System Design, Computer Architecture</li>
+                            <li><span>Hard Skills</span> <br> C++, Python, HTML, CSS  </li>
+                            <li><span>Soft Skills</span> <br> Communication, Creativity, Leadership, Adaptability</li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+
+<!-----javascript for tablinks-->
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+    <script src="app .js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaiah Steele Professional Website</title>
+    <link rel="stylesheet" href="tech.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<nav class="navbar">
+    <div class="navbar__container">
+        <a href="#home" id="navbar__logo">Jaiah Malik Steele</a>
+       <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+       </div> 
+       <ul class="navbar__menu">
+        <li class="navbar__item">
+            <a href="/index.html" class="navbar__links" id="home-page">Home</a>
+        </li>
+        <li class="navbar__item">
+            <a href="/tech.html" class="navbar__links" id="technical-page">Portfolio</a>
+        </li>
+        <li class="navbar__item">
+            <a href="/qualifications.html" class="navbar__links" id="qualifications-page">Qualifications</a>
+        </li>
+        <li class="navbar__item">
+            <a href="/service.html" class="navbar__links" id="service-page">Service/Involvement</a>
+        </li>
+        <li class="navbar__item">
+            <a href="/hobbies.html" class="navbar__links" id="hobbies-page">Hobbies/Interests</a>
+        </li>
+        <li class="navbar__btn">
+            <a href="/signup.html" class="button" id="more">Contacts</a>
+        </li>
+       </ul>
+    </div>
+</nav>
+
+
+</div>
+<div class="about-col-2">
+    <h1 class = "sub-title">Portfolio</h1>
+    <p> Research and Github repository.
+    </p>
+    <div class="tab-titles">
+        <p class = "tab-links active-link" onclick="opentab('Education')">Research</p>
+        <p class = "tab-links" onclick="opentab('Experience')">GitHub</p>
+       
+    </div>
+    <div class="tab-contents active-tab" id = "Education">
+        <ul>
+            <li><span>Nurturing STEM Pathways</span> <span></span> <br>There is an increasing acknowledgment of the importance of promoting STEM education, particularly among underrepresented groups (Starr et al., 2020)
+                Among those underrepresented are young men of color
+                Black and Latino men continue to be underrepresented in STEM fields (Funk & Parker, 2018; Roy, 2018)
+                To address these challenges, one potential avenue is the implementation of after-school programs explicitly designed to enhance STEM engagement and identity development among this demographic.
+Moreover, beyond academic learning, after-school programs can play a pivotal role in fostering identity development among underrepresented groups in STEM (Henderson, 2021). Click the link for my research on this issue!
+
+                 </li>
+            <li><span></span> <br><a href="UHREUPRESENTATION.pptx" class="buttons" download>Research Presentation</a></li>
+            <img src="./images/research.jpg" alt="person" class="team__img" />
+      </ul>
+    </div>
+    <div class="tab-contents" id = "Experience">
+        <ul>
+            <li><span>Github Repository</span> <br> <a href="https://github.com/csce-315-331-2024a/intro-to-git-jaymsteele01" target="_blank"><p>Repository</p></a></li>
+            <li><span>Personal Website</span> <br>In my repository you will see a personal website project. This project was made using 
+            CSS, HTML and Javascript. The website has the ability to toggle between styles using CSS. </li>
+           
+      </ul>
+    </div>
+    <div class="tab-contents" id = "Skills">
+        <ul>
+            <li><span>Relevant Coursework</span> <br> Data Structures and Algorithms, Digital System Design, Computer Architecture</li>
+            <li><span>Hard Skills</span> <br> C++, Python, HTML, CSS  </li>
+            <li><span>Soft Skills</span> <br> Communication, Creativity, Leadership, Adaptability</li>
+      </ul>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
